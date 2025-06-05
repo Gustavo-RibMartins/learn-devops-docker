@@ -73,3 +73,32 @@ docker build -t dsa-image .
 ```docker
 docker run --name dsacontainer dsa-image
 ```
+
+---
+
+## 5. Docker Compose
+
+* Crie um arquivo chamado `docker-compose.yml` com o conteúdo abaixo:
+
+```yml
+version: '3'
+
+services:
+  web1:
+    image: nginx
+    ports:
+      - "8080:80"
+
+  web2:
+    image: nginx
+    ports:
+      - "8081:80"
+```
+
+* Execute no temrinal os comandos abaixo:
+
+```docker
+docker-compose up -d
+
+docker-compose down
+```
