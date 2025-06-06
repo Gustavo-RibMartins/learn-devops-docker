@@ -20,7 +20,7 @@ docker build -t gusribm-terraform-image:lab .
 * Execute o comando abaixo para criar o container docker
 
 ```docker
-docker run -dit --name terraform-container dsa-terraform-image:lab /bin/bash
+docker run -dit --name terraform-container gusribm-terraform-image:lab /bin/bash
 ```
 
 * Verifique as versões do Terraform e do AWS CLI com os comandos abaixo:
@@ -29,3 +29,11 @@ docker run -dit --name terraform-container dsa-terraform-image:lab /bin/bash
 terraform --version
 aws --version
 ```
+
+* Acesse o terminal do conteiner e execute o comando:
+
+```bash
+aws configure
+```
+
+Informa a access e a secret-key para acessar a AWS de forma programática.
